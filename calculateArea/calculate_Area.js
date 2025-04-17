@@ -1,11 +1,15 @@
-let length;
-let width;
+function greet(name) {
+    const greeting = "Hello, ";
 
-function calculateArea() {
-    length = parseFloat(document.getElementById('length').value);
-    width = parseFloat(document.getElementById('width').value);
+    function sayHello() {
+        console.log(greeting + name);
+    }
 
-    let area = length * width;
+    return sayHello;
 }
 
-document.getElementById('result').innerText = `The area of the rectangle is: ${area}`;
+const greetJohn = greet("John");
+const greetAlice = greet("Alice");
+
+greetJohn();
+greetAlice();
